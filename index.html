@@ -480,8 +480,25 @@
 
         <section
           id="tentang"
-          class="card-border reveal rounded-[2rem] bg-[#171e29] p-7 sm:p-10"
+          class="card-border reveal rounded-[2rem] bg-[#171e29] p-5 sm:p-10"
         >
+          <div class="mt-5 px-1 sm:mt-6 sm:px-0">
+            <span
+              class="mb-4 inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-amber-200 sm:text-xs sm:tracking-[0.3em]"
+            >
+              About Us
+            </span>
+            <p
+              class="text-base leading-7 text-slate-200 sm:text-[2rem] sm:leading-[1.45] mb-6"
+            >
+              Jetindo Management membantu pemilik pesawat, eksekutif, keluarga,
+              dan perusahaan mengelola seluruh kebutuhan private aviation secara
+              aman, efisien, dan sangat personal. Dari flight planning, aircraft
+              management, hingga pendampingan perjalanan VIP, kami merancang
+              pengalaman yang terasa eksklusif namun tetap praktis untuk
+              keputusan bisnis cepat.
+            </p>
+          </div>
           <div class="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
             <article
               class="overflow-hidden rounded-[2rem] bg-[#5b606c] text-white sm:grid sm:grid-cols-[180px_1fr]"
@@ -489,31 +506,33 @@
               <img
                 src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=800&q=80"
                 alt="Tangga private jet"
-                class="h-full min-h-[220px] w-full object-cover"
+                class="h-64 w-full object-cover object-center sm:h-full sm:min-h-[220px]"
               />
-              <div class="flex flex-col justify-between p-6 sm:p-8">
+              <div class="flex flex-col justify-between p-5 sm:p-8">
                 <div>
                   <p
-                    class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200"
+                    class="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-amber-200 sm:mb-4 sm:text-xs sm:tracking-[0.3em]"
                   >
                     Solusi Perjalanan Premium
                   </p>
                   <h2
-                    class="max-w-[14ch] text-4xl font-bold leading-none sm:text-5xl"
+                    class="max-w-[14ch] text-[2rem] font-bold leading-[0.95] sm:text-5xl"
                   >
                     Booking private jet ke mana saja dengan layanan concierge
                     yang sigap.
                   </h2>
                 </div>
                 <div
-                  class="mt-6 flex flex-wrap items-end justify-between gap-4"
+                  class="mt-5 flex flex-col gap-4 text-left sm:mt-6 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between"
                 >
                   <div class="flex items-center gap-3 text-sm text-slate-100">
                     <i class="fa-solid fa-location-dot text-amber-300"></i>
-                    <span>Jakarta, Bali, Singapore, Dubai, Tokyo</span>
+                    <span class="leading-6"
+                      >Jakarta, Bali, Singapore, Dubai, Tokyo</span
+                    >
                   </div>
                   <div
-                    class="text-right text-xs font-semibold uppercase tracking-[0.3em] text-white/80"
+                    class="text-left text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 sm:text-right sm:text-xs sm:tracking-[0.3em]"
                   >
                     24/7 Support
                   </div>
@@ -524,7 +543,7 @@
             <article
               class="rounded-[2rem] bg-[#eef2f7] p-6 text-slate-950 sm:p-8"
             >
-              <div class="flex items-start justify-between gap-3">
+              <div class="flex items-start justify-between gap-3 items-center">
                 <div>
                   <p class="text-6xl font-extrabold leading-none">4.98</p>
                   <p
@@ -533,7 +552,7 @@
                     Berdasarkan 619 review
                   </p>
                 </div>
-                <div class="text-amber-500">
+                <div class="text-amber-500 text-4xl sm: text-2xl">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -542,7 +561,7 @@
                 </div>
               </div>
               <div
-                class="mt-8 grid grid-cols-2 gap-3 text-xs font-medium text-slate-600"
+                class="mt-8 grid grid-cols-2 gap-3 text-lg sm:text-s font-medium text-slate-600"
               >
                 <div class="chip rounded-full px-4 py-3">
                   Transparansi biaya
@@ -558,23 +577,6 @@
                 </div>
               </div>
             </article>
-          </div>
-          <div class="mt-6">
-            <span
-              class="mb-4 inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200"
-            >
-              About Us
-            </span>
-            <p
-              class="max-w-5xl text-xl leading-9 text-slate-200 sm:text-[2rem] sm:leading-[1.45]"
-            >
-              Jetindo Management membantu pemilik pesawat, eksekutif, keluarga,
-              dan perusahaan mengelola seluruh kebutuhan private aviation secara
-              aman, efisien, dan sangat personal. Dari flight planning, aircraft
-              management, hingga pendampingan perjalanan VIP, kami merancang
-              pengalaman yang terasa eksklusif namun tetap praktis untuk
-              keputusan bisnis cepat.
-            </p>
           </div>
         </section>
 
@@ -939,7 +941,7 @@
       <footer
         class="mt-8 rounded-[2rem] border border-white/10 bg-[#101722] px-6 py-8 text-sm text-slate-400 sm:px-8 sm:py-10"
       >
-        <div class="grid gap-8 xl:grid-cols-[0.95fr_0.65fr_1.1fr]">
+        <div class="grid gap-8 xl:grid-cols-[2fr_1fr_1fr]">
           <div>
             <div class="flex items-center gap-3">
               <span
@@ -962,7 +964,10 @@
             </div>
             <p class="mt-5 max-w-md leading-7">
               Private jet charter, aircraft management, dan layanan concierge
-              premium untuk kebutuhan perjalanan bisnis dan keluarga modern.
+              premium untuk kebutuhan perjalanan bisnis dan keluarga modern.<br />
+              <br />
+              - Jetindo Management - <br />
+              <span class="text-amber-400"> Aman, Efisien, Personal.</span>
             </p>
           </div>
           <div>
@@ -1018,7 +1023,7 @@
           ></iframe>
         </div>
         <div
-          class="mt-8 grid gap-4 border-t border-white/10 pt-6 md:grid-cols-[1fr_auto_1fr] md:items-center"
+          class="mt-8 grid gap-4 border-t border-white/10 pt-6 md:grid-cols-[1fr_auto_1fr] md:items-center justify-center"
         >
           <p>&copy; 2026 JETINDO. All rights reserved.</p>
           <div
