@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JAT Management - Private Jet Charter</title>
+    <title>JETINDO Management - Private Jet Charter</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,106 +23,6 @@
         scroll-behavior: smooth;
       }
 
-      .logo {
-        rotate: 320deg;
-      }
-
-      .gradient-dark {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      }
-
-      .gradient-gold {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      }
-
-      .nav-blur {
-        backdrop-filter: blur(10px);
-        background-color: rgba(30, 41, 59, 0.8);
-      }
-
-      .hero-overlay {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 23, 42, 0.7),
-          rgba(51, 65, 85, 0.5)
-        );
-        z-index: 1;
-      }
-
-      .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(245, 158, 11, 0.2);
-      }
-
-      .button-gold {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        transition: all 0.3s ease;
-      }
-
-      .button-gold:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
-      }
-
-      .testimonial-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-      }
-
-      .featured-blog {
-        background: linear-gradient(
-          135deg,
-          rgba(51, 65, 85, 0.5),
-          rgba(30, 41, 59, 0.5)
-        );
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        overflow: hidden;
-      }
-
-      .featured-blog::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle,
-          rgba(245, 158, 11, 0.1),
-          transparent
-        );
-        transition: all 0.3s ease;
-      }
-
-      .featured-blog:hover::before {
-        top: -30%;
-        right: -30%;
-      }
-
-      .rating-stars {
-        color: #f59e0b;
-      }
-
-      .scroll-smooth {
-        scroll-behavior: smooth;
-      }
-
       @keyframes float {
         0%,
         100% {
@@ -132,7 +32,6 @@
           transform: translateY(-20px);
         }
       }
-
       .float-animation {
         animation: float 3s ease-in-out infinite;
       }
@@ -142,12 +41,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-      }
-
-      /* Navbar Active State */
-      .nav-link {
-        position: relative;
-        transition: all 0.3s ease;
       }
 
       .nav-link::after {
@@ -160,20 +53,26 @@
         background: #f59e0b;
         transition: width 0.3s ease;
       }
-
       .nav-link:hover::after {
         width: 100%;
       }
     </style>
   </head>
-  <body class="gradient-dark text-white overflow-x-hidden">
+  <body
+    class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white overflow-x-hidden"
+  >
     <!-- Navigation -->
-    <nav class="nav-blur fixed top-0 w-full z-50 border-b border-slate-700/50">
+    <nav
+      class="fixed top-0 w-full z-50 border-b border-slate-700/50 backdrop-blur-lg bg-slate-900/80"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center space-x-2">
-            <i class="logo fas fa-plane text-amber-400 text-2xl"></i>
+            <i
+              class="fas fa-plane text-amber-400 text-2xl"
+              style="transform: rotate(320deg)"
+            ></i>
             <span class="text-xl font-bold">JETINDO</span>
             <span class="text-xs text-amber-400 font-semibold tracking-widest"
               >MANAGEMENT</span
@@ -213,7 +112,7 @@
               <span>My Account</span>
             </button>
             <button
-              class="button-gold text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-2"
+              class="bg-gradient-to-r from-amber-400 to-amber-600 hover:shadow-lg hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-2"
             >
               <i class="fas fa-star"></i>
               <span>Book Charter</span>
@@ -225,14 +124,14 @@
 
     <!-- Hero Section -->
     <section
-      class="hero-overlay pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative"
+      class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-slate-900/70 before:via-slate-800/50 before:to-slate-900/50 before:z-0"
       style="min-height: 100vh"
     >
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10"
       >
         <!-- Left Content -->
-        <div class="space-y-8">
+        <div class="space-y-8 relative z-10">
           <div>
             <p
               class="text-amber-400 text-sm font-semibold tracking-widest mb-4"
@@ -256,13 +155,13 @@
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 pt-6">
             <button
-              class="button-gold text-white px-8 py-4 rounded-full font-bold flex items-center justify-center space-x-3 group"
+              class="bg-gradient-to-r from-amber-400 to-amber-600 hover:shadow-lg hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300 text-white px-8 py-4 rounded-full font-bold flex items-center justify-center space-x-3 group"
             >
               <i class="fas fa-quote-left"></i>
               <span>Request quote</span>
             </button>
             <button
-              class="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:text-slate-900 transition flex items-center justify-center space-x-3"
+              class="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:text-slate-900 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3"
             >
               <span>Charter a flight</span>
               <i class="fas fa-arrow-right"></i>
@@ -276,14 +175,14 @@
             class="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-transparent z-10"
           ></div>
           <img
-            src="https://images.unsplash.com/photo-1540962351238-4c1d59becf51?w=600&h=700&fit=crop"
+            src="https://images.unsplash.com/photo-1642840900859-89c0ad56b7b7?w=600&h=700&fit=crop&q=80"
             alt="Luxury Private Jet"
             class="w-full h-full object-cover rounded-3xl float-animation"
           />
 
           <!-- Floating Card -->
           <div
-            class="absolute bottom-8 right-8 bg-slate-900/90 backdrop-blur-md border border-amber-400/30 rounded-2xl p-6 max-w-xs z-20"
+            class="absolute bottom-8 right-8 bg-slate-900/90 backdrop-blur-xl border border-amber-400/30 rounded-2xl p-6 max-w-xs z-20"
           >
             <div class="flex items-center justify-between mb-3">
               <h3 class="text-sm font-bold text-amber-400">
@@ -307,7 +206,7 @@
         <!-- Left Image -->
         <div class="relative h-96 lg:h-full order-2 lg:order-1">
           <img
-            src="https://images.unsplash.com/photo-1578575437530-eb6a78067507?w=600&h=600&fit=crop"
+            src="https://images.unsplash.com/photo-1579106670214-6f435ee3bae6?w=600&h=600&fit=crop&q=80"
             alt="Private Jet Interior"
             class="w-full h-full object-cover rounded-3xl shadow-2xl"
           />
@@ -338,12 +237,12 @@
 
           <!-- Rating Card -->
           <div
-            class="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+            class="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:-translate-y-2 transition-transform duration-300"
           >
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center space-x-1">
                 <span class="text-4xl font-black">4.98</span>
-                <div class="rating-stars">
+                <div class="text-amber-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -367,7 +266,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <!-- Service 1 -->
           <div
-            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 card-hover"
+            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300"
           >
             <div class="text-amber-400 text-4xl mb-6">
               <i class="fas fa-calendar"></i>
@@ -381,7 +280,7 @@
 
           <!-- Service 2 -->
           <div
-            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 card-hover"
+            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300"
           >
             <div class="text-amber-400 text-4xl mb-6">
               <i class="fas fa-graduation-cap"></i>
@@ -395,7 +294,7 @@
 
           <!-- Service 3 -->
           <div
-            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 card-hover"
+            class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300"
           >
             <div class="text-amber-400 text-4xl mb-6">
               <i class="fas fa-wrench"></i>
@@ -443,9 +342,11 @@
         <!-- Testimonials Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Testimonial 1 -->
-          <div class="testimonial-card rounded-2xl p-8">
+          <div
+            class="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300"
+          >
             <h4 class="font-bold text-lg mb-2">SAMUEL JONES</h4>
-            <div class="rating-stars text-sm mb-4">
+            <div class="text-amber-400 text-sm mb-4">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -459,9 +360,11 @@
           </div>
 
           <!-- Testimonial 2 -->
-          <div class="testimonial-card rounded-2xl p-8">
+          <div
+            class="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300"
+          >
             <h4 class="font-bold text-lg mb-2">CYNTHIA RICHARDS</h4>
-            <div class="rating-stars text-sm mb-4">
+            <div class="text-amber-400 text-sm mb-4">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -475,9 +378,11 @@
           </div>
 
           <!-- Testimonial 3 -->
-          <div class="testimonial-card rounded-2xl p-8">
+          <div
+            class="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300"
+          >
             <h4 class="font-bold text-lg mb-2">ELAINE YOUNG</h4>
-            <div class="rating-stars text-sm mb-4">
+            <div class="text-amber-400 text-sm mb-4">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -519,7 +424,7 @@
           </p>
 
           <button
-            class="button-gold text-white px-8 py-4 rounded-full font-bold inline-flex items-center space-x-3"
+            class="bg-gradient-to-r from-amber-400 to-amber-600 hover:shadow-lg hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300 text-white px-8 py-4 rounded-full font-bold inline-flex items-center space-x-3"
           >
             <span>Learn More</span>
             <i class="fas fa-arrow-right"></i>
@@ -529,7 +434,7 @@
         <!-- Right Image -->
         <div class="relative h-96 lg:h-full">
           <img
-            src="https://images.unsplash.com/photo-1639654802262-945199493acc?w=500&h=600&fit=crop"
+            src="https://images.unsplash.com/photo-1639654802262-945199493acc?w=500&h=600&fit=crop&q=80"
             alt="Jet Card"
             class="w-full h-full object-cover rounded-3xl shadow-2xl"
           />
@@ -539,7 +444,7 @@
 
           <!-- Floating Badge -->
           <div
-            class="absolute bottom-8 left-8 bg-slate-900/90 backdrop-blur-md border border-amber-400/30 rounded-2xl p-4 z-20"
+            class="absolute bottom-8 left-8 bg-slate-900/90 backdrop-blur-xl border border-amber-400/30 rounded-2xl p-4 z-20"
           >
             <p class="text-xs text-amber-400 font-bold mb-1">CARD DETAILS</p>
             <p class="text-slate-300 text-sm">Premium benefits included</p>
@@ -561,10 +466,10 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Blog Card 1 -->
           <div
-            class="featured-blog relative rounded-xl overflow-hidden h-64 cursor-pointer group"
+            class="relative rounded-xl overflow-hidden h-64 cursor-pointer group bg-gradient-to-br from-slate-700/50 to-slate-900/50 border border-white/10"
           >
             <img
-              src="https://images.unsplash.com/photo-1540962351238-4c1d59becf51?w=400&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1642840900859-89c0ad56b7b7?w=400&h=400&fit=crop&q=80"
               alt="Blog"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
             />
@@ -576,7 +481,7 @@
                 HOW MUCH DOES IT COST TO RENT A PRIVATE JET?
               </h3>
               <div
-                class="button-gold w-fit px-4 py-2 rounded text-sm font-semibold text-white"
+                class="bg-gradient-to-r from-amber-400 to-amber-600 w-fit px-4 py-2 rounded text-sm font-semibold text-white"
               >
                 Read More
               </div>
@@ -585,10 +490,10 @@
 
           <!-- Blog Card 2 -->
           <div
-            class="featured-blog relative rounded-xl overflow-hidden h-64 cursor-pointer group"
+            class="relative rounded-xl overflow-hidden h-64 cursor-pointer group bg-gradient-to-br from-slate-700/50 to-slate-900/50 border border-white/10"
           >
             <img
-              src="https://images.unsplash.com/photo-1578575437530-eb6a78067507?w=400&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1579106670214-6f435ee3bae6?w=400&h=400&fit=crop&q=80"
               alt="Blog"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
             />
@@ -600,7 +505,7 @@
                 HOW MUCH DOES A PRIVATE JET COST?
               </h3>
               <div
-                class="button-gold w-fit px-4 py-2 rounded text-sm font-semibold text-white"
+                class="bg-gradient-to-r from-amber-400 to-amber-600 w-fit px-4 py-2 rounded text-sm font-semibold text-white"
               >
                 Read More
               </div>
@@ -609,10 +514,10 @@
 
           <!-- Blog Card 3 -->
           <div
-            class="featured-blog relative rounded-xl overflow-hidden h-64 cursor-pointer group"
+            class="relative rounded-xl overflow-hidden h-64 cursor-pointer group bg-gradient-to-br from-slate-700/50 to-slate-900/50 border border-white/10"
           >
             <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1618278432453-fbc54602e48e?w=400&h=400&fit=crop&q=80"
               alt="Blog"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
             />
@@ -624,7 +529,7 @@
                 A COMPLETE GUIDE TO FLYING PRIVATELY
               </h3>
               <div
-                class="button-gold w-fit px-4 py-2 rounded text-sm font-semibold text-white"
+                class="bg-gradient-to-r from-amber-400 to-amber-600 w-fit px-4 py-2 rounded text-sm font-semibold text-white"
               >
                 Read More
               </div>
@@ -633,10 +538,10 @@
 
           <!-- Blog Card 4 -->
           <div
-            class="featured-blog relative rounded-xl overflow-hidden h-64 cursor-pointer group"
+            class="relative rounded-xl overflow-hidden h-64 cursor-pointer group bg-gradient-to-br from-slate-700/50 to-slate-900/50 border border-white/10"
           >
             <img
-              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=400&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1520763185298-1b434c919abe?w=400&h=400&fit=crop&q=80"
               alt="Blog"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
             />
@@ -646,7 +551,7 @@
             <div class="absolute bottom-0 left-0 right-0 p-4">
               <h3 class="text-lg font-bold mb-2">WITH YOUR PETS</h3>
               <div
-                class="button-gold w-fit px-4 py-2 rounded text-sm font-semibold text-white"
+                class="bg-gradient-to-r from-amber-400 to-amber-600 w-fit px-4 py-2 rounded text-sm font-semibold text-white"
               >
                 Read More
               </div>
@@ -671,7 +576,7 @@
         </p>
 
         <button
-          class="button-gold text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-2xl"
+          class="bg-gradient-to-r from-amber-400 to-amber-600 hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl"
         >
           <i class="fas fa-plane"></i>
           <span>Get Started Now</span>
@@ -689,7 +594,7 @@
           <div>
             <div class="flex items-center space-x-2 mb-4">
               <i class="fas fa-plane text-amber-400 text-2xl"></i>
-              <span class="text-xl font-bold">JAT</span>
+              <span class="text-xl font-bold">JETINDO</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">
               Premium private jet charter and management services for discerning
@@ -769,7 +674,7 @@
         <div class="border-t border-slate-700/50 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-slate-400 text-sm">
-              &copy; 2026 JAT Management. All rights reserved.
+              &copy; 2026 JETINDO Management. All rights reserved.
             </p>
             <div class="flex items-center space-x-4 mt-4 md:mt-0">
               <a
@@ -823,8 +728,10 @@
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           navbar.classList.add('shadow-lg');
+          navbar.classList.add('bg-slate-900/95');
         } else {
           navbar.classList.remove('shadow-lg');
+          navbar.classList.remove('bg-slate-900/95');
         }
       });
 
@@ -832,22 +739,12 @@
       lucide.createIcons();
 
       // Button hover effects
-      document.querySelectorAll('.button-gold').forEach((button) => {
+      document.querySelectorAll('button').forEach((button) => {
         button.addEventListener('mouseenter', function () {
           this.style.transform = 'scale(1.05)';
         });
         button.addEventListener('mouseleave', function () {
           this.style.transform = 'scale(1)';
-        });
-      });
-
-      // Card hover animations
-      document.querySelectorAll('.card-hover').forEach((card) => {
-        card.addEventListener('mouseenter', function () {
-          this.style.transform = 'translateY(-8px)';
-        });
-        card.addEventListener('mouseleave', function () {
-          this.style.transform = 'translateY(0)';
         });
       });
 
