@@ -261,7 +261,7 @@
           class="shell glass card-border mx-auto rounded-[2rem] px-4 py-3 sm:px-6"
         >
           <div class="flex items-center justify-between gap-4">
-            <a href="#hero" class="flex items-center gap-3">
+            <a href="#hero" class="flex items-center gap-4">
               <span
                 class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-amber-600 text-slate-950"
               >
@@ -1109,6 +1109,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/zod@3.23.8/lib/index.umd.min.js"></script>
     <script>
+      const Z = window.zod || window.Zod || window.Zod?.z || window.z || null;
       const WHATSAPP_URL = 'https://wa.me/6281384072641';
       const openWhatsApp = (message) =>
         `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
@@ -1177,15 +1178,14 @@
 
       sections.forEach((section) => sectionObserver.observe(section));
 
-      const formSchema = zod.object({
-        fullName: zod.string().min(3, 'Nama minimal 3 karakter.'),
-        serviceType: zod.string().min(1, 'Silakan pilih layanan.'),
-        contactInfo: zod
-          .string()
-          .min(6, 'Masukkan email atau nomor WhatsApp yang valid.'),
-        tripBrief: zod
-          .string()
-          .min(12, 'Brief perjalanan minimal 12 karakter.'),
+      const formSchema = Z.object({
+        fullName: Z.string().min(3, 'Nama minimal 3 karakter.'),
+        serviceType: Z.string().min(1, 'Silakan pilih layanan.'),
+        contactInfo: Z.string().min(
+          6,
+          'Masukkan email atau nomor WhatsApp yang valid.',
+        ),
+        tripBrief: Z.string().min(12, 'Brief perjalanan minimal 12 karakter.'),
       });
 
       const setFieldError = (field, message = '') => {
@@ -1232,14 +1232,14 @@
         }
 
         const message = [
-          'Halo Jetindo, saya ingin konsultasi charter.',
+          'Halo Jetindo, saya ingin konsultasi charter dan meminta penawaran.',
           `Nama: ${formData.fullName}`,
           `Layanan: ${formData.serviceType}`,
           `Kontak: ${formData.contactInfo}`,
-          `Brief: ${formData.tripBrief}`,
+          `Detail perjalanan: ${formData.tripBrief}`,
         ].join('\n');
 
-        window.location.href = openWhatsApp(message);
+        window.open(openWhatsApp(message), '_blank', 'noopener,noreferrer');
       });
     </script>
   </body>
