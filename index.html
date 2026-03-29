@@ -19,6 +19,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css"
+    />
     <style>
       :root {
         --bg: #101722;
@@ -35,6 +39,12 @@
 
       * {
         scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
       }
 
       body {
@@ -59,6 +69,7 @@
 
       .shell {
         max-width: 1500px;
+        min-width: 0;
       }
 
       .glass {
@@ -136,6 +147,44 @@
         max-height: 420px;
       }
 
+      iframe {
+        display: block;
+        max-width: 100%;
+      }
+
+      .ts-wrapper {
+        min-width: 0;
+      }
+
+      .ts-control,
+      .ts-dropdown {
+        background: #131b28;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #f7f8fb;
+        border-radius: 1rem;
+      }
+
+      .ts-control {
+        min-height: 54px;
+        padding: 0.9rem 1rem;
+        box-shadow: none;
+      }
+
+      .ts-wrapper.focus .ts-control {
+        border-color: #f1c66e;
+        box-shadow: 0 0 0 1px #f1c66e;
+      }
+
+      .ts-dropdown .active,
+      .ts-dropdown .option:hover {
+        background: rgba(217, 164, 65, 0.15);
+        color: #f7f8fb;
+      }
+
+      .field-error {
+        min-height: 1.25rem;
+      }
+
       @media (max-width: 768px) {
         .hero-copy {
           font-size: clamp(3rem, 13vw, 4.5rem);
@@ -202,7 +251,9 @@
                 >Ulasan Klien</a
               >
               <a
-                href="#kontak"
+                href="https://wa.me/6281384072641"
+                target="_blank"
+                rel="noreferrer"
                 class="rounded-full bg-gradient-to-r from-amber-300 to-amber-600 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
                 >Book Charter</a
               >
@@ -246,7 +297,9 @@
                 >Kontak</a
               >
               <a
-                href="#kontak"
+                href="https://wa.me/6281384072641"
+                target="_blank"
+                rel="noreferrer"
                 class="mt-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-600 px-4 py-3 text-center text-sm font-semibold text-slate-950"
                 >Konsultasi Gratis</a
               >
@@ -292,7 +345,9 @@
               </div>
               <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
-                  href="#kontak"
+                  href="https://wa.me/6281384072641"
+                  target="_blank"
+                  rel="noreferrer"
                   class="inline-flex items-center justify-center gap-3 rounded-full bg-slate-950 px-7 py-4 text-sm font-semibold text-white transition hover:bg-slate-800"
                 >
                   <i class="fa-solid fa-paper-plane"></i>
@@ -517,7 +572,9 @@
                 </h3>
               </div>
               <a
-                href="#kontak"
+                href="https://wa.me/6281384072641"
+                target="_blank"
+                rel="noreferrer"
                 class="rounded-full bg-gradient-to-r from-amber-300 to-amber-600 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-950"
                 >Konsultasi</a
               >
@@ -578,7 +635,9 @@
                     eksklusif.
                   </p>
                   <a
-                    href="#kontak"
+                    href="https://wa.me/6281384072641"
+                    target="_blank"
+                    rel="noreferrer"
                     class="mt-6 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-300 to-amber-600 px-5 py-3 text-sm font-semibold text-slate-950"
                     >Pelajari Program
                     <i class="fa-solid fa-arrow-right-long"></i
@@ -701,64 +760,97 @@
                   <div class="space-y-3 text-sm">
                     <a
                       class="block text-slate-100 hover:text-amber-300"
-                      href="mailto:hello@jetindo.co.id"
-                      >hello@jetindo.co.id</a
+                      href="https://wa.me/6281384072641"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Chat via WhatsApp</a
                     >
                     <a
                       class="block text-slate-100 hover:text-amber-300"
-                      href="tel:+6281384072641"
-                      >+62 812 3456 7890</a
+                      href="https://wa.me/6281384072641"
+                      target="_blank"
+                      rel="noreferrer"
+                      >0813 8407 2641</a
                     >
                   </div>
                 </div>
 
-                <form class="rounded-[1.6rem] bg-white/5 p-5 sm:p-6">
+                <form
+                  id="contactForm"
+                  class="rounded-[1.6rem] bg-white/5 p-5 sm:p-6"
+                  novalidate
+                >
                   <div class="grid gap-4">
                     <label
                       class="text-xs font-medium uppercase tracking-[0.2em] text-slate-400"
                     >
                       Nama
                       <input
+                        id="fullName"
+                        name="fullName"
                         type="text"
                         placeholder="Nama lengkap"
                         class="mt-2 w-full rounded-2xl border border-white/10 bg-transparent px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-amber-300"
                       />
+                      <span
+                        id="error-fullName"
+                        class="field-error mt-2 block text-[11px] normal-case tracking-normal text-red-300"
+                      ></span>
                     </label>
                     <label
                       class="text-xs font-medium uppercase tracking-[0.2em] text-slate-400"
                     >
                       Layanan
                       <select
+                        id="serviceType"
+                        name="serviceType"
                         class="mt-2 w-full rounded-2xl border border-white/10 bg-[#131b28] px-4 py-3 text-sm text-white outline-none transition focus:border-amber-300"
                       >
+                        <option value="">Pilih layanan</option>
                         <option>Private Jet Charter</option>
                         <option>Aircraft Management</option>
                         <option>Jet Card Program</option>
                         <option>VIP Concierge</option>
                       </select>
+                      <span
+                        id="error-serviceType"
+                        class="field-error mt-2 block text-[11px] normal-case tracking-normal text-red-300"
+                      ></span>
                     </label>
                     <label
                       class="text-xs font-medium uppercase tracking-[0.2em] text-slate-400"
                     >
                       Email / WhatsApp
                       <input
+                        id="contactInfo"
+                        name="contactInfo"
                         type="text"
                         placeholder="Kontak yang bisa dihubungi"
                         class="mt-2 w-full rounded-2xl border border-white/10 bg-transparent px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-amber-300"
                       />
+                      <span
+                        id="error-contactInfo"
+                        class="field-error mt-2 block text-[11px] normal-case tracking-normal text-red-300"
+                      ></span>
                     </label>
                     <label
                       class="text-xs font-medium uppercase tracking-[0.2em] text-slate-400"
                     >
                       Brief perjalanan
                       <textarea
+                        id="tripBrief"
+                        name="tripBrief"
                         rows="4"
                         placeholder="Contoh: Jakarta - Bali, 6 penumpang, keberangkatan minggu depan"
                         class="mt-2 w-full rounded-2xl border border-white/10 bg-transparent px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-amber-300"
                       ></textarea>
+                      <span
+                        id="error-tripBrief"
+                        class="field-error mt-2 block text-[11px] normal-case tracking-normal text-red-300"
+                      ></span>
                     </label>
                     <button
-                      type="button"
+                      type="submit"
                       class="inline-flex w-fit items-center gap-3 rounded-full bg-gradient-to-r from-amber-300 to-amber-600 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
                     >
                       Kirim Permintaan
@@ -822,14 +914,22 @@
               <p>Jakarta, Indonesia</p>
               <a
                 class="block hover:text-amber-300"
-                href="mailto:hello@jetindo.co.id"
-                >hello@jetindo.co.id</a
+                href="https://wa.me/6281384072641"
+                target="_blank"
+                rel="noreferrer"
+                >Chat via WhatsApp</a
               >
-              <a class="block hover:text-amber-300" href="tel:+6281384072641"
-                >+62 812 3456 7890</a
+              <a
+                class="block hover:text-amber-300"
+                href="https://wa.me/6281384072641"
+                target="_blank"
+                rel="noreferrer"
+                >0813 8407 2641</a
               >
             </div>
-            <!-- <div class="mt-5 overflow-hidden rounded-[1.5rem] border border-white/10">
+            <div
+              class="mt-5 overflow-hidden rounded-[1.5rem] border border-white/10"
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.98777108098!2d106.88297251135903!3d-6.26533789369714!2m3!1f0!2f0!3f0!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15ca78f42c63%3A0xdc8077d4d6be4249!2sHalim%20Perdanakusuma%20International%20Airport!5e0!3m2!1sen!2sid!4v1774804827586!5m2!1sen!2sid"
                 width="600"
@@ -840,7 +940,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
                 class="h-[260px] w-full"
               ></iframe>
-            </div> -->
+            </div>
           </div>
         </div>
         <div
@@ -855,12 +955,21 @@
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zod@3.23.8/lib/index.umd.min.js"></script>
     <script>
+      const WHATSAPP_URL = 'https://wa.me/6281384072641';
       const menuToggle = document.getElementById('menuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
       const navLinks = document.querySelectorAll('a[href^="#"]');
       const sections = [...document.querySelectorAll('main section[id]')];
       const revealItems = document.querySelectorAll('.reveal');
+      const contactForm = document.getElementById('contactForm');
+      const serviceSelect = document.getElementById('serviceType');
+      const serviceControl = new TomSelect(serviceSelect, {
+        create: false,
+        allowEmptyOption: true,
+      });
 
       menuToggle.addEventListener('click', () => {
         const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -909,6 +1018,71 @@
       );
 
       sections.forEach((section) => sectionObserver.observe(section));
+
+      const formSchema = zod.object({
+        fullName: zod.string().min(3, 'Nama minimal 3 karakter.'),
+        serviceType: zod.string().min(1, 'Silakan pilih layanan.'),
+        contactInfo: zod
+          .string()
+          .min(6, 'Masukkan email atau nomor WhatsApp yang valid.'),
+        tripBrief: zod
+          .string()
+          .min(12, 'Brief perjalanan minimal 12 karakter.'),
+      });
+
+      const setFieldError = (field, message = '') => {
+        const errorNode = document.getElementById(`error-${field}`);
+        const inputNode = document.getElementById(field);
+        if (errorNode) {
+          errorNode.textContent = message;
+        }
+
+        if (field === 'serviceType') {
+          serviceControl.wrapper.classList.toggle(
+            'border-red-400',
+            Boolean(message),
+          );
+          return;
+        }
+
+        if (inputNode) {
+          inputNode.classList.toggle('border-red-400', Boolean(message));
+        }
+      };
+
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = {
+          fullName: document.getElementById('fullName').value.trim(),
+          serviceType: serviceControl.getValue().trim(),
+          contactInfo: document.getElementById('contactInfo').value.trim(),
+          tripBrief: document.getElementById('tripBrief').value.trim(),
+        };
+
+        ['fullName', 'serviceType', 'contactInfo', 'tripBrief'].forEach(
+          (field) => setFieldError(field),
+        );
+
+        const result = formSchema.safeParse(formData);
+
+        if (!result.success) {
+          result.error.issues.forEach((issue) => {
+            setFieldError(issue.path[0], issue.message);
+          });
+          return;
+        }
+
+        const message = [
+          'Halo Jetindo, saya ingin konsultasi charter.',
+          `Nama: ${formData.fullName}`,
+          `Layanan: ${formData.serviceType}`,
+          `Kontak: ${formData.contactInfo}`,
+          `Brief: ${formData.tripBrief}`,
+        ].join('\n');
+
+        window.location.href = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+      });
     </script>
   </body>
 </html>
